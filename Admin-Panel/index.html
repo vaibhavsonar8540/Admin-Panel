@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index-media.css">
+	<link rel="icon" href="Images/bankdash.svg" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>BankDash</title>
+</head>
+
+<body>
+
+	<div class="main">
+		<div class="left p-4 fs-5 d-none d-lg-block">
+			<div class="logo d-flex justify-content-center">
+				<img src="images/bankdash.svg" alt="" class="img-fluid" style="max-width: 50px;">
+				<div class="fs-3 fw-bold ps-1" style="color: #343c6a">BankDash.</div>
+			</div>
+		
+			<div class="navmenu">
+				<ul class="nav flex-column">
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link"><i class="bi bi-house-door-fill"></i> Home</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-receipt"></i> Transactions</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-person-fill"></i> Accounts</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-bar-chart-fill"></i> Investment</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-credit-card"></i> Credit-card</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-coin"></i> Loans</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-tools"></i> Service</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-gear-fill"></i> Setting</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+					</li>
+					<li class="nav-item pt-4 w-100">
+						<a href="" class="nav-link"><i class="bi bi-person-fill-add"></i> Sign-up</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="right">
+
+			<div class="container-fluid w-100 px-5 py-4 d-flex justify-content-between align-items-center bg-white">
+				<div class="box">
+					<div class="fs-3 d-none d-lg-block" style="color: #343c6a; font-weight: 600">
+						Overview
+					</div>
+				</div>
+				<div class="d-flex align-items-center d-lg-none">
+					<img src="Images/bankdash.svg" alt="Logo" class="me-2">
+					<i class="bi bi-list fs-3" data-bs-toggle="offcanvas" data-bs-target="#sidemenu"></i>
+				</div>
+				<div class="box d-flex align-items-center ms-auto">
+					<div class="search d-none d-lg-flex align-items-center me-3">
+						<i class="bi bi-search"></i>
+						<input type="search" placeholder="Search here something" class="form-control ms-2"
+							style="width: 200px;" />
+					</div>
+					<div class="icon d-flex align-items-center fs-4 me-3">
+						<i class="bi bi-gear me-3"></i>
+						<i class="bi bi-bell"></i>
+					</div>
+					<div class="profile">
+						<img src="Images/profile.jpg" alt="Profile" class="rounded-circle"
+							style="width: 40px; height: 40px;">
+					</div>
+				</div>
+			</div>
+
+			<!-- Searc bar -->
+			<div class="mobile-search col-12 d-sm-block0 d-md-block d-lg-none mt-2">
+				<i class="bi bi-search"></i>
+				<input type="search" placeholder="Search here something" />
+			</div>
+
+			<!-- Cards -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 d-flex px-4 flex-wrap">
+						<div class="col-12 col-sm-6 col-lg-4 px-2 py-3">
+							<div class="box fs-4 pb-3">My cards</div>
+							<div class="cards p-3"
+								style="background-color: #231ff1; color: white; border-radius: 20px;">
+								<div class="w-100">
+									<span class="d-block">Balance</span>
+									<div class="fs-5 d-flex justify-content-between align-items-center mt-2">
+										<span>$5,756</span>
+										<img src="Images/chip-white.png" alt="" style="width: 40px; height: 40px" />
+									</div>
+								</div>
+								<div class="w-100 d-flex pt-4 pb-2 align-items-center">
+									<div class="col-6">
+										<span class="d-block">CARD HOLDER</span>
+										<div class="fs-6">Eddy Cusuma</div>
+									</div>
+									<div class="col-6">
+										<span class="d-block">VALID THRU</span>
+										<div class="fs-6">12/22</div>
+									</div>
+								</div>
+								<div class="w-100 d-flex pt-3 border-top justify-content-between align-items-center">
+									<div class="col-8 fs-6">3778 **** **** 1234</div>
+									<div class="col-4 d-flex justify-content-end">
+										<img src="Images/circle-white.svg" alt="" style="width: 40px; height: 40px" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-lg-4 px-2 py-3">
+							<div class="box d-flex justify-content-end align-items-center fs-5 mt-3 mb-2">See all</div>
+							<div class="cards border border-light bg-white p-3" style="border-radius: 20px;">
+								<div class="w-100">
+									<span class="d-block">Balance</span>
+									<div class="fs-5 d-flex justify-content-between align-items-center mt-2">
+										<span>$3200</span>
+										<img src="Images/chip-black.png" alt="" style="width: 40px; height: 40px" />
+									</div>
+								</div>
+								<div class="w-100 d-flex pt-4 pb-2 align-items-center">
+									<div class="col-6">
+										<span class="d-block">CARD HOLDER</span>
+										<div class="fs-6">Jane Doe</div>
+									</div>
+									<div class="col-6">
+										<span class="d-block">VALID THRU</span>
+										<div class="fs-6">01/24</div>
+									</div>
+								</div>
+								<div class="w-100 d-flex pt-3 border-top justify-content-between">
+									<div class="col-8 fs-6">1234 **** **** 5678</div>
+									<div class="col-4 d-flex justify-content-end">
+										<img src="images/circle-black.svg" alt="" style="width: 40px; height: 40px" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 px-2 py-3">
+							<div class="box fs-4 pb-3">Recent Transactions</div>
+							<div class="cards border border-light bg-white p-3" style="border-radius: 20px;">
+								<div class="d-flex justify-content-between mb-4">
+									<div
+										style="padding: 10px; background-color: #feefe1; color: #ffc863; height: 50px; border-radius: 50%;">
+										<i class="bi bi-person-vcard fs-4"></i>
+									</div>
+									<div class="text-start w-100 ps-3">
+										<p class="fs-6 text-black mb-0">Deposit from card</p>
+										<p class="text-muted mb-0">25 January 2021</p>
+									</div>
+									<div class="text-danger fs-6">-$500</div>
+								</div>
+								<div class="d-flex justify-content-between mb-4">
+									<div
+										style="padding: 10px; background-color: #feefe1; color: #ffc863; height: 50px; border-radius: 50%;">
+										<i class="bi bi-person-vcard fs-4"></i>
+									</div>
+									<div class="text-start w-100 ps-3">
+										<p class="fs-6 text-black mb-0">Deposit from card</p>
+										<p class="text-muted mb-0">25 January 2021</p>
+									</div>
+									<div class="text-success fs-6">$500</div>
+								</div>
+								<div class="d-flex justify-content-between mb-4">
+									<div
+										style="padding: 10px; background-color: #feefe1; color: #ffc863; height: 50px; border-radius: 50%;">
+										<i class="bi bi-person-vcard fs-4"></i>
+									</div>
+									<div class="text-start w-100 ps-3">
+										<p class="fs-6 text-black mb-0">Deposit from card</p>
+										<p class="text-muted mb-0">25 January 2021</p>
+									</div>
+									<div class="text-success fs-6">$500</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- graph -->
+			<div class="col-12 d-flex px-3 py-4 flex-wrap">
+				<div class="col-12 col-lg-8 mb-4 px-3 overflow-auto">
+					<div class="pt-4 pb-3 fs-4">Weekly Activity</div>
+					<div class="cards border border-primary p-3" style="border-radius: 10px; min-height: 400px;">
+						<canvas id="myChart" style="width: 100%; height: 400px;"></canvas>
+					</div>
+				</div>
+				<div class="col-12 col-lg-4 mb-4 px-3">
+					<div class="pt-4 pb-3 fs-4">Expense Statistic</div>
+					<div class="cards border border-primary p-3" style="border-radius: 10px;  min-height: 400px;">
+						<canvas id="myChart1" style="width: 100%; height: 400px;"></canvas>
+					</div>
+				</div>
+				
+			</div>
+
+
+			<!-- Transfer and history -->
+			<div class="container-fluid px-3 px-md-5 py-4">
+				<div class="row">
+					<!-- Main Container -->
+					<div class="col-12">
+						<div class="row">
+							<!-- Left Section (Slider + Input) -->
+							<div class="col-12 col-lg-4 mb-4">
+								<div class="fs-4 mb-3">Quick Transfer</div>
+								<div class="cards border border-primary p-3" style="border-radius: 10px;">
+									<div class="d-flex flex-column justify-content-center align-items-center">
+										<div class="swiper mySwiper">
+											<div class="swiper-wrapper pt-4 pb-5">
+												<!-- Swiper Slides -->
+												<div class="swiper-slide">
+													<div class="profile-slider d-flex justify-content-center">
+														<img src="Images/img1.png" alt="" class="img-fluid">
+													</div>
+													<div class="info text-center">
+														<div class="text-black fs-5">Felix Vidal</div>
+														<div class="text-muted">CTO</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="profile-slider d-flex justify-content-center">
+														<img src="Images/img2.png" alt="" class="img-fluid">
+													</div>
+													<div class="info text-center">
+														<div class="text-black fs-5">Livia Bator</div>
+														<div class="text-muted">Ceo</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="profile-slider d-flex justify-content-center">
+														<img src="Images/img3.png" alt="" class="img-fluid">
+													</div>
+													<div class="info text-center">
+														<div class="text-black fs-5">Randy Press</div>
+														<div class="text-muted">Designer</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="profile-slider d-flex justify-content-center">
+														<img src="Images/img4.png" alt="" class="img-fluid">
+													</div>
+													<div class="info text-center">
+														<div class="text-black fs-5">Workman</div>
+														<div class="text-muted">Designer</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="profile-slider d-flex justify-content-center">
+														<img src="Images/img5.png" alt="" class="img-fluid">
+													</div>
+													<div class="info text-center">
+														<div class="text-black fs-5">Kevin Reed</div>
+														<div class="text-muted">UX</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="profile-slider d-flex justify-content-center">
+														<img src="Images/img6.png" alt="" class="img-fluid">
+													</div>
+													<div class="info text-center">
+														<div class="text-black fs-5">Sofia Gill</div>
+														<div class="text-muted">Director</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="profile-slider d-flex justify-content-center">
+														<img src="Images/img7.png" alt="" class="img-fluid">
+													</div>
+													<div class="info text-center">
+														<div class="text-black fs-5">Jo barnys</div>
+														<div class="text-muted">Analyst</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+										<div
+											class="d-flex flex-column flex-sm-row justify-content-between align-items-center mt-3">
+											<div class="text-muted mb-2 mb-sm-0">Write Amount</div>
+											<div class="d-flex custom-input bg-light flex-grow-1"
+												style="max-width: 400px;">
+												<input type="text" class="bg-light border-end-0 flex-grow-1"
+													placeholder="Write Amount" value="525.50">
+												<button class="send-btn rounded-pill ms-2">
+													Send
+													<i class="bi bi-send-fill"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 col-lg-8 mb-4">
+								<div class="fs-4 mb-3">Balance History</div>
+								<div class="cards border border-primary p-3" style="border-radius: 10px;">
+									<canvas id="myChart2" style="width: 100%; height: 300px;"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid px-5 py-4">
+				<div class="row">
+					<div class="overflow-auto">
+						<div class="fs-4 pb-3">Quick Transfer</div>
+						<table class="table bg-white rounded">
+							<tr class="m-5">
+								<td class="col-3 fw-bold fs-6 d-flex justify-content-end w-100 pe-4">Description</td>
+								<td class="col-2 fw-bold fs-6 ">Transaction ID</td>
+								<td class="col-1 fw-bold fs-6 ">Type</td>
+								<td class="col-1 fw-bold fs-6 "> Card</td>
+								<td class="col-2 fw-bold fs-6 ">Date</td>
+								<td class="col-1 fw-bold fs-6 ">Amount</td>
+								<td class="col-2 fw-bold fs-6 ">Download</td>
+							</tr>
+							<tr class="m-5">
+								<td class="employee d-flex">
+									<div class="icon2">
+										<i class="ri-arrow-down-line "></i>
+									</div>
+									<div class="info ps-3">
+										<h6>Spotify Subscription</h6>
+									</div>
+								</td>
+								<td>#12548796</td>
+								<td>Shopping</td>
+								<td>1234 ****</td>
+								<td>3 Jul, 4.51 PM</td>
+								<td class="text-danger">- $100</td>
+								<td>
+									<span class="badge text-dark fs-6 rounded-pill" style="border: 1px solid black;">Download</span>
+								</td>
+							</tr>
+							<tr class="m-5">
+								<td class="employee d-flex">
+									<div class="icon2">
+										<i class="ri-arrow-up-line"></i>
+									</div>
+									<div class="info ps-3">
+										<h6>Freepik Sales</h6>
+									</div>
+								</td>
+								<td>#12548790</td>
+								<td>Transfer</td>
+								<td>1234 ****</td>
+								<td>4 Jul, 4.51 PM</td>
+								<td class="text-success">+ $200</td>
+								<td>
+									<span class="badge text-dark fs-6 rounded-pill" style="border: 1px solid black;">Download</span>
+								</td>
+							</tr>
+							<tr class="m-5">
+								<td class="employee d-flex">
+									<div class="icon2">
+										<i class="ri-arrow-down-line "></i>
+									</div>
+									<div class="info ps-3">
+										<h6>Mobile Service</h6>
+									</div>
+								</td>
+								<td>#12548796</td>
+								<td>Shopping</td>
+								<td>1234 ****</td>
+								<td>5 Jul, 4.51 PM</td>
+								<td class="text-danger">- $300</td>
+								<td>
+									<span class="badge text-dark fs-6 rounded-pill" style="border: 1px solid black;">Download</span>
+								</td>
+							</tr>
+							<tr class="m-5">
+								<td class="employee d-flex">
+									<div class="icon2">
+										<i class="ri-arrow-up-line"></i>
+									</div>
+									<div class="info ps-3">
+										<h6>Willson</h6>
+									</div>
+								</td>
+								<td>#12548796</td>
+								<td>Transfer</td>
+								<td>1234 ****</td>
+								<td>6 Jul, 4.51 PM</td>
+								<td class="text-success">+ $400</td>
+								<td>
+									<span class="badge text-dark fs-6 rounded-pill" style="border: 1px solid black;">Download</span>
+								</td>
+							</tr>
+							<tr class="m-5">
+								<td class="employee d-flex">
+									<div class="icon2">
+										<i class="ri-arrow-down-line "></i>
+									</div>
+									<div class="info ps-3">
+										<h6>Emily</h6>
+									</div>
+								</td>
+								<td>#12548796</td>
+								<td>Transfer</td>
+								<td>1234 ****</td>
+								<td>7 Jul, 4.51 PM</td>
+								<td class="text-danger">- $500</td>
+								<td>
+									<span class="badge text-dark fs-6 rounded-pill" style="border: 1px solid black;">Download</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="sidemenu" aria-labelledby="offcanvasExampleLabel">
+		<div class="offcanvas-header">
+			<div class="logo d-flex align-items-center">
+				<img src="images/bankdash.svg" alt="" class="img-fluid" style="max-width: 50px;">
+				<div class="fs-3 fw-bold ps-1" style="color: #343c6a">BankDash.</div>
+			</div>
+			<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		</div>
+	
+		<div class="offcanvas-body">
+			<div class="navmenu">
+				<ul class="nav flex-column">
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link"><i class="bi bi-house-door-fill"></i> Home</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-receipt"></i> Transactions</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-person-fill"></i> Accounts</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-bar-chart-fill"></i> Investment</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-credit-card"></i> Credit-card</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-coin"></i> Loans</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-tools"></i> Service</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link text-black-50"><i class="bi bi-gear-fill"></i> Setting</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+					</li>
+					<li class="nav-item pt-4">
+						<a href="" class="nav-link"><i class="bi bi-person-fill-add"></i> Sign-up</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+	<script>
+		const ctx = document.getElementById("myChart").getContext("2d");
+
+		new Chart(ctx, {
+			type: "bar",
+			data: {
+				labels: ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+				datasets: [
+					{
+						label: 'Dataset 1',
+						data: [420, 332, 301, 335, 490, 106, 320],
+						backgroundColor: 'rgb(24,20,243)',
+						borderColor: 'rgb(24,20,243)',
+						borderWidth: 2,
+						borderRadius: 10,
+						barThickness: 'flex',
+					},
+					{
+						label: 'Dataset 2',
+						data: [220, 132, 251, 335, 390, 230, 320],
+						backgroundColor: 'rgb(22,219,204)',
+						borderColor: 'rgb(22,219,204)',
+						borderWidth: 2,
+						borderRadius: 10,
+						barThickness: 'flex',
+					},
+				],
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				layout: {
+					padding: {
+						left: 10,
+						right: 10,
+						top: 10,
+						bottom: 10
+					}
+				},
+				scales: {
+					y: {
+						beginAtZero: true,
+						ticks: {
+							color: '#343c6a',
+						},
+					},
+					x: {
+						ticks: {
+							color: '#343c6a',
+						},
+						grid: {
+							display: false
+						}
+					},
+				},
+				plugins: {
+					legend: {
+						labels: {
+							color: '#343c6a',
+						}
+					}
+				},
+				barPercentage: 0.9,
+				categoryPercentage: 0.8,
+			},
+		});
+
+
+
+
+		const ctx1 = document.getElementById("myChart1").getContext("2d");
+
+		new Chart(ctx1, {
+			type: "polarArea",
+			data: {
+				labels: ["Others", "Investment", "Entertainment", "Bill Expenses"],
+				datasets: [
+					{
+						data: [20, 25, 30, 25],
+						borderWidth: 2,
+						backgroundColor: ['rgb(252,121,0)', 'rgb(52,60,106)', 'rgb(24,20,243)', 'rgb(250,0,255)'],
+					},
+				],
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,
+				plugins: {
+					legend: {
+						position: 'top',
+						labels: {
+							color: '#343c6a',
+						}
+					}
+				},
+			},
+		});
+
+
+		// line graph
+		const ctx2 = document.getElementById("myChart2");
+
+		new Chart(ctx2, {
+			type: "line",
+			data: {
+				labels: ["jul", "aug", "sep", "oct", "nov", "dec", "jan", "feb", "mar", "apr", "may", "jun"],
+				datasets: [
+					{
+						label: 'Balance History',
+						data: [90, 200, 120, 225, 480, 310, 220, 332, 144, 220, 110, 490],
+						backgroundColor: 'rgba(24,20,243,0.2)',  // Use RGBA for transparency
+						borderColor: 'rgb(24,20,243)',
+						borderWidth: 2,
+						lineTension: 0.1,  // Add line tension to smoothen the line
+						pointRadius: 3,    // Add points to make the line more visible
+						pointBackgroundColor: 'rgb(24,20,243)',  // Color of points
+						pointBorderColor: '#fff',  // Border color of points
+						pointBorderWidth: 2,  // Width of the point border
+					}
+				],
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: false,  // Ensure the chart adjusts to container size
+				scales: {
+					y: {
+						beginAtZero: true,
+						ticks: {
+							color: '#343c6a',
+						},
+					},
+					x: {
+						ticks: {
+							color: '#343c6a',
+						},
+					},
+				},
+				plugins: {
+					legend: {
+						labels: {
+							color: '#343c6a',
+						}
+					}
+				}
+			}
+		});
+
+
+		// Swiper
+		var swiper = new Swiper('.mySwiper', {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				640: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+				1024: {
+					slidesPerView: 4,
+					spaceBetween: 40,
+				},
+			},
+		});
+
+	</script>
+
+</body>
+
+</html>
